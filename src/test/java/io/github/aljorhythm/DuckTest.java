@@ -21,7 +21,7 @@ public class DuckTest {
     void duckSwim_shouldSwim() {
         List<String> outputs = new ArrayList<String>();
         Duck duck = new Duck(outputs::add);
-        duck.fly();
+        duck.swim();
         assertEquals(Arrays.asList("I am swimming"), outputs);
     }
 }

@@ -13,6 +13,6 @@ public class Bird extends Animal {
     }
 
     void sing() {
-        this.log.accept("I am Singing");
+        this.log.accept("I am singing");
     }
 }
