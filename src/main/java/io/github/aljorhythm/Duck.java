@@ -1,8 +1,10 @@
 package io.github.aljorhythm;
 
+import io.github.aljorhythm.interfaces.Swimmable;
+
 import java.util.function.Consumer;
 
-public class Duck extends Bird {
+public class Duck extends Bird implements Swimmable {
 
     public Duck(Consumer<String> log) {
         super(log);
@@ -12,7 +14,7 @@ public class Duck extends Bird {
         log.accept("Quack, quack");
     }
 
-    void swim() {
+    public void swim() {
         log.accept("I am swimming");
     }
 }
