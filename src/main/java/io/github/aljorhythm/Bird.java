@@ -1,17 +1,19 @@
 package io.github.aljorhythm;
 
+import io.github.aljorhythm.interfaces.Flyable;
 import io.github.aljorhythm.interfaces.HasSound;
 import io.github.aljorhythm.interfaces.Walkable;
 
 import java.util.function.Consumer;
 
-public class Bird extends Animal implements HasSound, Walkable {
+public class Bird extends Animal implements HasSound, Flyable, Walkable {
 
     public Bird(Consumer<String> log) {
         super(log);
     }
 
-    void fly() {
+    @Override
+    public void fly() {
         this.log.accept("I am flying");
     }
 
