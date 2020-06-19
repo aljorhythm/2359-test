@@ -8,8 +8,4 @@ public class Animal {
     public Animal(Consumer<String> log) {
         this.log = log;
     }
-
-    void walk() {
-        this.log.accept("I am walking");
-    }
 }
