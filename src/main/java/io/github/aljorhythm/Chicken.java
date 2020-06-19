@@ -9,8 +9,8 @@ public class Chicken extends Bird {
         super(log);
     }
 
-    void sing() {
-        log.accept("Cluck, cluck");
+    public String getSound() {
+        return "Cluck, cluck";
     }
 
     void fly() {

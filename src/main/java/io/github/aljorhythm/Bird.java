@@ -1,8 +1,10 @@
 package io.github.aljorhythm;
 
+import io.github.aljorhythm.interfaces.HasSound;
+
 import java.util.function.Consumer;
 
-public class Bird extends Animal {
+public class Bird extends Animal implements HasSound {
 
     public Bird(Consumer<String> log) {
         super(log);
@@ -13,6 +15,11 @@ public class Bird extends Animal {
     }
 
     void sing() {
-        this.log.accept("I am singing");
+        this.log.accept(getSound());
+    }
+
+    @Override
+    public String getSound() {
+        return "I am singing";
     }
 }
